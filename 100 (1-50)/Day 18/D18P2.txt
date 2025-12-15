@@ -1,0 +1,38 @@
+/*
+Q36: Write a program to find the HCF (GCD) of two numbers.
+
+Sample Test Cases:
+Input 1:
+12 18
+Output 1:
+6
+
+Input 2:
+7 9
+Output 2:
+1
+*/
+
+#include <stdio.h>
+
+int main() {
+    int a, b, temp_a, temp_b, hcf;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    temp_a = a;
+    temp_b = b;
+
+    // Using Euclidean algorithm
+    while (temp_b != 0) {
+        int remainder = temp_a % temp_b;
+        temp_a = temp_b;
+        temp_b = remainder;
+    }
+
+    hcf = temp_a;
+    printf("%d\n", hcf);
+
+    return 0;
+}

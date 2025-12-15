@@ -1,0 +1,26 @@
+/*
+Q90: Toggle case of each character in a string.
+
+Sample Test Cases:
+Input 1:
+Hello
+Output 1:
+hELLO
+*/
+
+#include <stdio.h>
+
+int main() {
+    char qz8[300];
+    scanf("%s", qz8);
+
+    for (int i = 0; qz8[i] != '\0'; i++) {
+        if (qz8[i] >= 'a' && qz8[i] <= 'z')
+            qz8[i] = qz8[i] - 32;
+        else if (qz8[i] >= 'A' && qz8[i] <= 'Z')
+            qz8[i] = qz8[i] + 32;
+    }
+
+    printf("%s", qz8);
+    return 0;
+}

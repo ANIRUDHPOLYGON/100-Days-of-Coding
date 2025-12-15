@@ -1,0 +1,40 @@
+/*
+Q95: Check if one string is a rotation of another.
+
+Sample Test Cases:
+Input 1:
+abcde
+deabc
+Output 1:
+Rotation
+
+Input 2:
+abc
+acb
+Output 2:
+Not rotation
+*/
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s9a[300], t4b[300], mix[600];
+    scanf("%s", s9a);
+    scanf("%s", t4b);
+
+    if (strlen(s9a) != strlen(t4b)) {
+        printf("Not rotation");
+        return 0;
+    }
+
+    strcpy(mix, s9a);
+    strcat(mix, s9a);
+
+    if (strstr(mix, t4b))
+        printf("Rotation");
+    else
+        printf("Not rotation");
+
+    return 0;
+}

@@ -1,0 +1,29 @@
+/*
+Q91: Remove all vowels from a string.
+
+Sample Test Cases:
+Input 1:
+education
+Output 1:
+dctn
+*/
+
+#include <stdio.h>
+
+int main() {
+    char r1m[300], outx[300];
+    scanf("%s", r1m);
+
+    int i = 0, j = 0;
+    while (r1m[i] != '\0') {
+        char c = r1m[i];
+        if (!(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U')) {
+            outx[j++] = c;
+        }
+        i++;
+    }
+    outx[j] = '\0';
+
+    printf("%s", outx);
+    return 0;
+}

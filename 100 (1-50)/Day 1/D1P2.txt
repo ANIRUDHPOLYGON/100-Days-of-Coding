@@ -1,0 +1,28 @@
+/*
+Q2 (User Inputs, Operations & Output)
+Write a program to input two numbers and display their sum, difference, product, and quotient.
+*/
+
+#include <stdio.h>
+
+int main() {
+    float x, y, s, d, p, q;
+
+    printf("Enter first number: ");
+    scanf("%f", &x);
+
+    printf("Enter second number: ");
+    scanf("%f", &y);
+
+    s = x + y;
+    d = x - y;
+    p = x * y;
+    q = x / y;
+
+    printf("Sum: %.2f\n", s);
+    printf("Difference: %.2f\n", d);
+    printf("Product: %.2f\n", p);
+    printf("Quotient: %.2f\n", q);
+
+    return 0;
+}

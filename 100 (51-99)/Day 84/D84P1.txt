@@ -1,0 +1,32 @@
+/*
+Q134: Define an enum with SUCCESS, FAILURE, and TIMEOUT, and print messages accordingly.
+
+Sample Test Cases:
+Input 1:
+FAILURE
+Output 1:
+Operation failed
+*/
+
+#include <stdio.h>
+
+int main() {
+    enum Status {SUCCESS, FAILURE, TIMEOUT};
+    enum Status stat;
+
+    int input;
+    printf("Enter 0 for SUCCESS, 1 for FAILURE, 2 for TIMEOUT: ");
+    scanf("%d", &input);
+    stat = input;
+
+    if(stat == SUCCESS)
+        printf("Operation successful\n");
+    else if(stat == FAILURE)
+        printf("Operation failed\n");
+    else if(stat == TIMEOUT)
+        printf("Operation timed out\n");
+    else
+        printf("Invalid input\n");
+
+    return 0;
+}
